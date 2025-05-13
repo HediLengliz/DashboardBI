@@ -21,7 +21,11 @@
     "@angular/platform-server": "^19.1.0",
     "@angular/router": "^19.1.0",
     "@angular/ssr": "^19.1.5",
+    "@ngneat/overview": "6.1.1",
+    "@ngxpert/hot-toast": "^4.1.2",
+    "app": "^0.1.0",
     "express": "^4.18.2",
+    "react-router-dom": "^7.6.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

@@ -1,19 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { trigger, transition, style, animate } from '@angular/animations';
-import {NgIf} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
+  selector: 'app-total-amount-by-year-component',
   imports: [
     RouterLink,
-    RouterLinkActive,
-    RouterOutlet,
-    NgIf
+    RouterLinkActive
   ],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css',
+  templateUrl: './total-amount-by-year-component.component.html',
+  styleUrl: './total-amount-by-year-component.component.css',
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [
@@ -26,18 +22,16 @@ import {NgIf} from '@angular/common';
     ])
   ]
 })
-export class DashboardComponent implements OnInit {
-  showToast: boolean = false;
-
+export class TotalAmountByYearComponentComponent implements OnInit {
   constructor(private router: Router) {}
-
   ngOnInit() {
     const nav = this.router.getCurrentNavigation();
     const loginSuccess = nav?.extras?.state?.['loginSuccess'];
-
     if (loginSuccess) {
-      this.showToast = true;
-      setTimeout(() => this.showToast = false, 2000);
+      // Show toast message for 2 seconds
+      setTimeout(() => {
+        // Hide toast message after 2 seconds
+      }, 2000);
     }
   }
 }

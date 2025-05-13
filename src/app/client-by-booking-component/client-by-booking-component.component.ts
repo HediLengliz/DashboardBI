@@ -1,19 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {NgIf} from "@angular/common";
+import {Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
-import {NgIf} from '@angular/common';
-
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
+  selector: 'app-client-by-booking-component',
   imports: [
     RouterLink,
     RouterLinkActive,
     RouterOutlet,
     NgIf
   ],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css',
+  templateUrl: './client-by-booking-component.component.html',
+  styleUrl: './client-by-booking-component.component.css',
   animations: [
     trigger('fadeInOut', [
       transition(':enter', [
@@ -26,18 +24,17 @@ import {NgIf} from '@angular/common';
     ])
   ]
 })
-export class DashboardComponent implements OnInit {
-  showToast: boolean = false;
 
+export class ClientByBookingComponentComponent   implements OnInit{
   constructor(private router: Router) {}
-
   ngOnInit() {
     const nav = this.router.getCurrentNavigation();
     const loginSuccess = nav?.extras?.state?.['loginSuccess'];
-
     if (loginSuccess) {
-      this.showToast = true;
-      setTimeout(() => this.showToast = false, 2000);
+      // Show toast message for 2 seconds
+      setTimeout(() => {
+        // Hide toast message after 2 seconds
+      }, 2000);
     }
   }
 }

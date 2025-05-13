@@ -1,4 +1,34 @@
-<div style="text-align: center; margin-top: 20px;">
-  <h2>Dashboard</h2>
-  <iframe title="Reservation" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=ca6d43df-0d8a-4e42-b847-26910982eded&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
+
+
+<div class="dashboard-container">
+
+
+  <nav class="sidebar">
+    <ul>
+      <li><a routerLink="client-by-booking" routerLinkActive="active">Net Revenu By Booking channel / Room Type</a></li>
+      <li><a routerLink="total-amount-by-year" routerLinkActive="active">Net Revenu By Nationality  / Client By Nationality</a></li>
+      <li><a routerLink="loyalty" routerLinkActive="active">Net Revenu By Loyalty Members / Reservation By Stay Reason</a></li>
+      <li><a routerLink="extra" routerLinkActive="active">Extra Costs</a></li>
+
+    </ul>
+  </nav>
+  <div
+    *ngIf="showToast"
+    class="futuristic-toast"
+    [@fadeInOut]>
+    ✅ Login successful as <strong>admin</strong>!
+  </div>
+  <div class="content">
+    <header>
+      <h1>Ocupancy Growrh / Yearly Revenu</h1>
+      <div
+        *ngIf="showToast"
+        class="futuristic-toast"
+        [@fadeInOut]>
+        ✅ Login successful as <strong>admin</strong>!
+      </div>
+    </header>
+    <iframe title="Reservation (3)" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=d0273bb3-563d-4982-8be9-a63485544e1f&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
+
+  </div>
 </div>

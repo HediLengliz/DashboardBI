@@ -1,14 +1,33 @@
-<div style="max-width: 300px; margin: 50px auto;">
-  <h2>Login</h2>
-  <form (ngSubmit)="login()">
-    <div>
-      <label for="username">Username:</label>
-      <input id="username" [(ngModel)]="username" name="username" required />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<div class="login-container">
+
+  <div class="login-overlay"></div>
+  <div class="login-box">
+    <div class="hotel-logo">
+
     </div>
-    <div style="margin-top: 10px;">
-      <label for="password">Password:</label>
-      <input id="password" type="password" [(ngModel)]="password" name="password" required />
-    </div>
-    <button type="submit" style="margin-top: 15px;">Entrer</button>
-  </form>
+    <h1 class="login-title">Welcome to Radisson</h1>
+    <div class="login-subtitle">Please login to continue</div>
+    <form (ngSubmit)="login()" class="login-form">
+      <div class="input-group">
+        <input id="username" [(ngModel)]="username" name="username" required />
+        <label for="username" class="animated-label">Username</label>
+        <div class="input-icon">
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+      <div class="input-group">
+        <input id="password" type="password" [(ngModel)]="password" name="password" required />
+        <label for="password" class="animated-label">Password</label>
+        <div class="input-icon">
+          <i class="fas fa-lock"></i>
+        </div>
+      </div>
+      <button type="submit" class="login-btn">
+        <span>Enter</span>
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </form>
+  </div>
 </div>

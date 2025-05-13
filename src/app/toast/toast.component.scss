@@ -1,0 +1,14 @@
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, rgb(6, 152, 125), rgba(6, 152, 125, 0.47));
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 81, 66, 0.47);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  z-index: 1000;
+  overflow: hidden;
+}
